@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="title">Buscar Artista</h1>
+  <div class="form">
+    <input [(ngModel)]="nombre" placeholder="Nombre del artista..." />
+    <button (click)="buscar()">Buscar</button>
+  </div>
+
+  <div class="results" *ngIf="resultados.length > 0">
+    <h2>Resultados:</h2>
+    <div *ngFor="let r of resultados" class="card">
+      <p><strong>Artista:</strong> {{ r.artista }}</p>
+      <p><strong>Álbum:</strong> {{ r.album }}</p>
+      <p><strong>Año:</strong> {{ r.ano }}</p>
+      <p><strong>Precio:</strong> ${{ r.precio }}</p>
+      <p><strong>Discográfica:</strong> {{ r.discografica }} ({{ r.pais_discografica }})</p>
+    </div>
+  </div>
+</div>
