@@ -4,7 +4,7 @@ on:
   push:
     branches: ["master"]
 
-  # Allows you to run this workflow manually from the Actions tabb
+  # Allows you to run this workflow manually from the Actions tabbb
   workflow_dispatch:
 
 jobs:
