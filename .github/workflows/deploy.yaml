@@ -8,26 +8,30 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Build job
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      
+uses: actions/checkout@v4,
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: latest
+      
+name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: latest,
 
-      - name: Install dependencies
-        run: npm install
+      
+name: Install dependencies
+      run: npm install,
 
-      - name: Build
-        run: npm run build
+      
+name: Build
+      run: npm run build,
 
-      - name: Deploy to Github pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          npm run ng -- deploy --repo=https://github.com/beth-1820/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-.git --name="Beth-1820" --email="beth_1820@outlook.com" --base-href=/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-/
+      
+name: Deploy to Github pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        npm run ng -- deploy --base-href=/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-/,
