@@ -30,4 +30,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm run ng -- deploy --repo=https://github.com/beth-1820/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-.git --name="Beth-1820" --email="beth_1820@outlook.com" --base-href=/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-/
+          npm run ng -- deploy --repo=https://github.com/beth-1820/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-.git --name="beth-1820" --email="beth_1820@outlook.com" --base-href=/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-/
+          
