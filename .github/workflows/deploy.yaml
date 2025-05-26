@@ -29,5 +29,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm run ng -- deploy --base-href=/Investigacion-Lenguajes-Aplicaciones-Comerciales-Frontend-/
           npm run ng -- deploy
